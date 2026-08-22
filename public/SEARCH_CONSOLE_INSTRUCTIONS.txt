@@ -1,0 +1,14 @@
+This folder is for static assets served at the root of the site.
+
+To verify with Google Search Console:
+1. Go to https://search.google.com/search-console
+2. Add property → URL prefix → https://razashah.dev
+3. Choose "HTML tag" verification method
+4. Copy the content="..." value from the meta tag
+5. Paste it into app/layout.tsx under:
+   verification: { google: "PASTE_CODE_HERE" }
+6. Deploy → click Verify in Search Console
+
+Alternatively, download the HTML verification file Google provides
+and drop it here in /public/ — it will be served at:
+https://razashah.dev/google[...].html

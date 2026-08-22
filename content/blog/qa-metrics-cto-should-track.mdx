@@ -1,0 +1,108 @@
+---
+title: "QA Metrics Every CTO Should Track in 2026"
+description: "The eight quality metrics that give engineering leadership a true picture of software quality — and the vanity metrics to stop obsessing over."
+date: "2026-03-05"
+category: "QA Leadership"
+tags: ["qa-metrics", "engineering-leadership", "quality", "okrs"]
+author: "Raza Shah"
+readingTime: 7
+featured: false
+---
+
+Most CTOs are tracking the wrong QA metrics. They're watching test pass rates and automation percentages while their customers are hitting production bugs every week.
+
+Here are the metrics that actually matter — and why.
+
+## The Problem with Traditional QA Metrics
+
+"We have 85% test automation coverage" sounds impressive. But if those automated tests are all happy-path unit tests that pass on every build while integration bugs slip through to production, that number is meaningless.
+
+Quality metrics need to answer one question: **are we shipping reliable software that delights users?**
+
+## The Eight Metrics That Matter
+
+### 1. Escaped Defect Rate
+
+**What**: Bugs found in production that should have been caught before release.
+
+**Why it matters**: This is the most direct measure of QA effectiveness. Every escaped defect represents a real user experience failure.
+
+**Target**: < 5% of total defects per release cycle
+
+**Formula**: (Production bugs / Total bugs in period) × 100
+
+### 2. Mean Time to Detect (MTTD)
+
+**What**: Average time from a bug being introduced to it being detected.
+
+**Why it matters**: Bugs caught in development cost 10× less to fix than bugs caught in production. MTTD measures how early your quality signals fire.
+
+**Target**: < 24 hours for critical paths
+
+### 3. Release Confidence Score
+
+**What**: A composite score indicating readiness for production release.
+
+**Why it matters**: Replaces the vague "are we ready?" conversation with data.
+
+**Components**: Automation pass rate + Critical path coverage + Performance benchmarks met + Security scan clean
+
+### 4. Test Flakiness Rate
+
+**What**: Percentage of test runs that produce inconsistent results on the same code.
+
+**Why it matters**: Flaky tests erode trust in automation and waste engineer time on false investigations. Teams with high flakiness begin ignoring CI failures — a dangerous habit.
+
+**Target**: < 2% of test runs
+
+### 5. Automation ROI
+
+**What**: Time saved by automation vs. time invested in building and maintaining it.
+
+**Why it matters**: Automation is an investment. CTOs should know the return.
+
+**Formula**: (Manual test time saved per cycle × cycles per year) / (Build time + Annual maintenance time)
+
+A healthy ratio is 5:1 or better within 12 months.
+
+### 6. Cycle Time from Commit to Test Feedback
+
+**What**: How long after a code commit do engineers get test results?
+
+**Why it matters**: Slow feedback loops mean developers have context-switched before they see failures. Fast loops catch bugs while the code is still fresh.
+
+**Target**: < 15 minutes for smoke suite, < 60 minutes for full regression
+
+### 7. Customer-Reported Bug Rate
+
+**What**: Bugs reported by customers per release or per month.
+
+**Why it matters**: This is the most honest external measure of quality. If customers are finding bugs before your team does, something is fundamentally wrong.
+
+### 8. Test Debt Ratio
+
+**What**: Ratio of untested critical paths to total critical paths.
+
+**Why it matters**: Like technical debt, test debt compounds. Tracking it keeps leadership aware of accumulating quality risk.
+
+## Metrics to Stop Over-Indexing On
+
+- **Raw test count**: 10,000 unit tests for trivial functions tells you nothing about system reliability
+- **Automation percentage alone**: context matters enormously
+- **Bug count per release**: depends entirely on feature complexity and scope
+
+## Building Your QA Dashboard
+
+I recommend starting with three metrics for any team new to quality measurement:
+
+1. Escaped Defect Rate (outcome)
+2. Cycle Time to Feedback (process efficiency)
+3. Test Flakiness Rate (automation health)
+
+These three give you a clear picture without overwhelming stakeholders.
+
+Once you have a baseline on these three, add Release Confidence Score as your pre-release gate, and you have a solid foundation.
+
+---
+
+*Want to build a quality metrics program for your engineering organization? [Book a free QA leadership consultation](/#contact).*
